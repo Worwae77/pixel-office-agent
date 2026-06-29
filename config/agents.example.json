@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "agents": [
+    {
+      "id": "hermes",
+      "displayName": "Hermes",
+      "role": "Chief of Staff",
+      "providerId": "hermes",
+      "model": "hermes"
+    },
+    {
+      "id": "codex",
+      "displayName": "Codex",
+      "role": "Software Engineer",
+      "providerId": "codex",
+      "model": "codex"
+    },
+    {
+      "id": "gemini",
+      "displayName": "Gemini",
+      "role": "Researcher",
+      "providerId": "gemini",
+      "model": "gemini"
+    },
+    {
+      "id": "qwen",
+      "displayName": "Qwen",
+      "role": "Test Engineer",
+      "providerId": "qwen",
+      "model": "qwen"
+    },
+    {
+      "id": "deepseek",
+      "displayName": "DeepSeek",
+      "role": "Reviewer",
+      "providerId": "deepseek",
+      "model": "deepseek"
+    },
+    {
+      "id": "glm",
+      "displayName": "GLM",
+      "role": "Technical Writer",
+      "providerId": "glm",
+      "model": "glm"
+    }
+  ]
+}

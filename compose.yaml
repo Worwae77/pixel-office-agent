@@ -1,0 +1,20 @@
+services:
+  pixel-office:
+    build:
+      context: .
+    image: pixel-office-agent:local
+    container_name: pixel-office-agent
+    restart: unless-stopped
+    ports:
+      - "${PIXEL_OFFICE_PORT:-3100}:3100"
+    volumes:
+      - pixel-office-state:/root/.pixel-agents
+    environment:
+      NODE_ENV: production
+      PIXEL_AGENTS_DEBUG: "${PIXEL_AGENTS_DEBUG:-0}"
+      PIXEL_OFFICE_HOOK_TOKEN: "${PIXEL_OFFICE_HOOK_TOKEN:-}"
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  pixel-office-state:
