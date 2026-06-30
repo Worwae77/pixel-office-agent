@@ -221,6 +221,11 @@ function registerWebSocketRoute(app: FastifyInstance, options: HttpServerOptions
     store.on('agentRemoved', onAgentRemoved);
     store.on('broadcast', onBroadcast);
 
+    // Send snapshot of existing agents to newly connected client
+    for (const agent of store.values()) {
+      onAgentAdded(agent.id, agent);
+    }
+
     // Handle incoming client messages
     socket.on('message', (data: Buffer | string) => {
       try {
